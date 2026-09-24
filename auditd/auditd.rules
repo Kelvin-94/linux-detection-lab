@@ -1,0 +1,8 @@
+## Linux Detection Lab - auditd watch rules
+## Load with: sudo cp auditd.rules /etc/audit/rules.d/ && sudo augenrules --load
+
+-w /etc/passwd -p wa -k account_change
+-w /etc/shadow -p wa -k account_change
+-w /etc/group  -p wa -k account_change
+-w /etc/cron.d          -p wa -k cron_change
+-w /var/spool/cron/     -p wa -k cron_change

@@ -1,0 +1,8 @@
+// 20 failed logins
+index=wineventlog EventCode=4625
+| stats count BY src_ip, TargetUserName
+| where count >= 20
+
+// hidden admin created
+index=wineventlog (EventCode=4720 OR EventCode=4732 GroupName="Administrators")
+| table _time, host, user, ObjectName, GroupName

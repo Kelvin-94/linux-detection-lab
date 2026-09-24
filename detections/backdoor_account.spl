@@ -1,0 +1,4 @@
+index=linux sourcetype=auditd key=account_change
+| rex "proctitle=(?<cmd>.*)"
+| search cmd="*useradd*" OR cmd="*usermod*"
+| table _time, host, cmd
