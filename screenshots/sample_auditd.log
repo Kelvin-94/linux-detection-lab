@@ -1,0 +1,9 @@
+type=SYSCALL msg=audit(1790260510.118:5481): arch=c000003e syscall=59 success=yes exit=0 a0=7f3a2c1b4d00 a1=7f3a2c1b6a00 a2=7f3a2c1b7800 a3=8 items=2 ppid=8700 pid=8812 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=42 comm="useradd" exe="/usr/sbin/useradd" subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 key="account_change"
+type=PATH msg=audit(1790260510.118:5481): item=0 name="/etc/passwd" inode=131081 dev=08:02 mode=0100644 ouid=0 ogid=0 rdev=00:00 nametype=CREATE
+type=PROCTITLE msg=audit(1790260510.118:5481): proctitle=75736572616464002D6F002D750030002D670030002D4D
+type=SYSCALL msg=audit(1790260540.471:5482): arch=c000003e syscall=59 success=yes exit=0 a0=7f3a2c1b4d00 a1=7f3a2c1b6a00 a2=7f3a2c1b7800 a3=8 items=2 ppid=8700 pid=8830 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=42 comm="usermod" exe="/usr/sbin/usermod" subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 key="account_change"
+type=PATH msg=audit(1790260540.471:5482): item=0 name="/etc/group" inode=131082 dev=08:02 mode=0100644 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL
+type=PROCTITLE msg=audit(1790260540.471:5482): proctitle=757365726D6F64
+type=SYSCALL msg=audit(1790260780.902:5490): arch=c000003e syscall=257 success=yes exit=9 a0=ffffff9c a1=7f3a2c1b7d00 a2=0 a3=0 items=1 ppid=8830 pid=8890 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=42 comm="crontab" exe="/usr/bin/crontab" subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 key="cron_change"
+type=PATH msg=audit(1790260780.902:5490): item=0 name="/var/spool/cron/kelvin" inode=918274 dev=08:02 mode=0100600 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL
+type=PROCTITLE msg=audit(1790260780.902:5490): proctitle=63726F6E746162002D6C

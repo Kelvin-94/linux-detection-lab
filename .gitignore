@@ -1,4 +1,6 @@
 *.log
+# Keep the synthetic sample logs used by the documentation and detection tests
+!screenshots/sample_*.log
 .env
 notes/
 .DS_Store
