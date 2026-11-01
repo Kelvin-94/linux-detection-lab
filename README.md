@@ -1,5 +1,7 @@
 # Linux Detection Lab
 
+[![lint](https://github.com/Kelvin-94/linux-detection-lab/actions/workflows/lint.yml/badge.svg)](https://github.com/Kelvin-94/linux-detection-lab/actions/workflows/lint.yml)
+
 Purple-team lab that simulates common Linux attack techniques and validates
 Splunk detection rules against them. Every simulation maps to MITRE ATT&CK.
 
@@ -43,24 +45,31 @@ Run `simulations/cleanup.sh` when finished.
 
 ```
 linux-detection-lab/
-├── README.md
-├── LICENSE
-├── .gitignore
-├── simulations/
-│   ├── ssh_bruteforce.sh
-│   ├── backdoor_account.sh
-│   ├── cron_persistence.sh
-│   └── cleanup.sh
-├── detections/
-│   ├── ssh_bruteforce.spl
-│   ├── backdoor_account.spl
-│   ├── cron_persistence.spl
-│   └── windows_equivalents.spl
+├── .github/workflows/lint.yml      # CI: shellcheck + SPL sanity check
+├── simulations/                    # attack simulations (one per ATT&CK technique)
+├── detections/                     # Splunk saved searches (.spl)
+├── screenshots/                    # synthetic sample logs + expected output
+├── scripts/
+│   └── lint_spl.sh                 # SPL sanity checker used by CI
 ├── auditd/
 │   └── auditd.rules
-└── docs/
-    └── ATT&CK-mapping.md
+├── docs/
+│   └── ATT&CK-mapping.md
+├── CONTRIBUTING.md
+├── LICENSE
+└── README.md
 ```
+
+## Screenshots & sample output
+
+See [`screenshots/`](screenshots/) for synthetic sample log data and the
+expected Splunk output for each rule. These are documentation samples, not
+captures from a live deployment — real-environment PNGs are welcome via PR.
+
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md). CI runs shellcheck and an SPL sanity
+check on every push.
 
 ## License
 

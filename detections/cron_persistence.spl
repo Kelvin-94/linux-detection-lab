@@ -1,2 +1,2 @@
-index=linux sourcetype=linux_auditd key=cron_change
-| table _time, host, acct, comm, exe
+index=linux sourcetype=auditd key=cron_change
+| table _time, host, comm, exe, name
