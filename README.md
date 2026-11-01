@@ -8,6 +8,8 @@ Splunk detection rules against them. Every simulation maps to MITRE ATT&CK.
 > For authorized test environments only. Never run these simulations against
 > systems you do not own or have explicit written permission to test.
 
+![Linux Detection Lab overview](docs/assets/lab-overview.png)
+
 ## What's inside
 
 | Simulation | Technique | ATT&CK | Detection |
@@ -54,7 +56,9 @@ linux-detection-lab/
 ├── auditd/
 │   └── auditd.rules
 ├── docs/
-│   └── ATT&CK-mapping.md
+│   ├── ATT&CK-mapping.md
+│   ├── launch-post.md
+│   └── assets/lab-overview.png
 ├── CONTRIBUTING.md
 ├── LICENSE
 └── README.md
